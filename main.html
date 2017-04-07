@@ -14,9 +14,19 @@
         Delete Card
     </button>
 
-
     <button type='button' onclick=window.showModalDialog("./addBook.html","status:no") >
         Add Book
     </button>
+
+    <form action="search.php" method="post">
+        <span><input type="text" name=word></span>
+        <span><input type="submit"></span>
+    </form>
+
+
+    <button type='button' onclick=window.showModalDialog("./borrow.html","status:no") >
+        Borrow
+    </button>
+
 </body>
 </html>
