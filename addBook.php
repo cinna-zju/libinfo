@@ -42,17 +42,23 @@ if($result==FALSE) die("input error");
 else{
     $isexist = mysqli_num_rows($result);
     if( $isexist ){
-        echo "bno already existed</br>";
+        echo "modifying</br>";
         echo "before:";
         check($con);
         update($con);
         echo "after:";
         check($con);
+        if(mysqli_errno($con)==0)
+            echo "item modified successfully</br>";
+        else
+            echo mysqli_error($con);
     }else{
         mysqli_query($con, "insert into book(bno) values('{$_POST[bno]}')");
         update($con);
-        echo "create item successfully</br>";
-
+        if(mysqli_errno($con)==0)
+            echo "item created successfully</br>";
+        else
+            echo mysqli_error($con);
     }
 }
 
