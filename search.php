@@ -10,19 +10,9 @@ function output($result)
     }
 
 }
-$con = mysqli_connect("127.0.0.1","root","951028") or die ("could not connect to mysql");
-
-mysqli_select_db($con, "test2") or die ("no database");
-
-if (mysqli_connect_errno())
-{
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    //you need to exit the script, if there is an error
-    exit();
-}
+$con = mysqli_connect("127.0.0.1","root","951028","test2") or die ("could not connect to mysql");
 
 $word = explode(",", $_POST[word]);
-#echo $word[0], $word[1];
 if($word[1]!=""){
     $result1 = mysqli_query($con, "select * from book where year >= {$word[0]} AND year <= {$word[1]}
                                     OR (price >={$word[0]} AND price <={$word[1]})");

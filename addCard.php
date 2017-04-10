@@ -22,18 +22,8 @@ function check($con)
     echo "</br>";
 
 }
-
-$con = mysqli_connect("127.0.0.1","root","951028") or die ("could not connect to mysql");
-
-mysqli_select_db($con, "test2") or die ("no database");
-
-if (mysqli_connect_errno())
-{
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    //you need to exit the script, if there is an error
-    exit();
-}
-
+echo $GLOBALS["flag"];
+$con = mysqli_connect("127.0.0.1","root","951028","test2") or die ("could not connect to mysql");
   $result = mysqli_query($con,"select cno from card where cno='{$_POST[cno]}'");
   if($result==FALSE) die(mysqli_error());
   else{

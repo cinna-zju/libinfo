@@ -10,10 +10,7 @@ function output($result)
     }
 
 }
-$con = mysqli_connect("127.0.0.1","root","951028") or die ("could not connect to mysql");
-
-mysqli_select_db($con, "test2") or die ("no database");
-
+$con = mysqli_connect("127.0.0.1","root","951028","test2") or die ("could not connect to mysql");
 if (mysqli_connect_errno())
 {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();

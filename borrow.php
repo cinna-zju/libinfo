@@ -11,9 +11,7 @@ function check($con)
         die("invalid book ID");
 }
 
-$con = mysqli_connect("127.0.0.1","root","951028") or die ("could not connect to mysql");
-
-mysqli_select_db($con, "test2") or die ("no database");
+$con = mysqli_connect("127.0.0.1","root","951028","test2") or die ("could not connect to mysql");
 
 if (mysqli_connect_errno())
 {

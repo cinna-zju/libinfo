@@ -1,36 +1,60 @@
 <html>
 <head>
-    <script>
-
-
-    </script>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="main.css" type="text/css" >
 </head>
 <body>
-    <button type='button' onclick=window.showModalDialog("./addCard.html","status:no") >
-        Add Card
-    </button>
+<div id="content">
+	<div class="line">
+	     <form id="search" action="search.php" method="post">
+	        <span><input type="text" name=word></span>
+	        <span><input type="submit" value="搜索"></span>
+	    </form>
 
-    <button type='button' onclick=window.showModalDialog("./delCard.html","status:no") >
-        Delete Card
-    </button>
+		    <button id="login" type='button' onclick=window.showModalDialog("./login.html","status:no") >
+		        Login
+		    </button>
 
-    <button type='button' onclick=window.showModalDialog("./addBook.html","status:no") >
-        Add Book
-    </button>
+		    <button id="exit" type='button' onclick=window.showModalDialog("./exit.html","status:no") >
+		        Exit
+		    </button>
+	</div>
 
-    <form action="search.php" method="post">
-        <span><input type="text" name=word></span>
-        <span><input type="submit"></span>
-    </form>
+	<div class="line">
+	
+	    <button id="add" 	type='button' onclick=window.showModalDialog("./addCard.html","status:no") >
+	        Add Card
+	    </button>
+
+	    <button id="delete" type='button' onclick=window.showModalDialog("./delCard.html","status:no") >
+	        Delete Card
+	    </button>
+	</div>
+	
+	<div class="line">
+	    <button id="addBook" type='button' onclick=window.showModalDialog("./addBook.html","status:no") >
+	        Add Book
+	    </button>
+	</div>
 
 
-    <button type='button' onclick=window.showModalDialog("./borrow.html","status:no") >
-        Borrow
-    </button>
+	<div class="line">
+	    <form action="load.php" method="post" enctype="multipart/form-data">
+	        <input type="file" name="file" id="file" />
+	        <input id="submit" type="submit" name="submit"/>
+	    </form>
+	</div>
 
-    <button type='button' onclick=window.showModalDialog("./return.html","status:no") >
-        return
-    </button>
+	<div class="line">
+	    <button id="borrow" type='button' onclick=window.showModalDialog("./borrow.html","status:no") >
+	        Borrow
+	    </button>
 
+	    <button id="return" type='button' onclick=window.showModalDialog("./return.html","status:no") >
+	        Return
+	    </button>
+	</div>
+
+</div>
 </body>
 </html>
