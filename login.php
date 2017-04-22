@@ -1,18 +1,32 @@
 <?php
-$user=$_POST[name];
-$pw=$_POST[pw];
+require 'common.php';
 
-$con = mysqli_connect("127.0.0.1","{$user}","{$pw}","test2") or die ("could not connect to mysql");
-if (mysqli_connect_errno())
-{
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    //you need to exit the script, if there is an error
-    exit();
-}else{
-    echo "login successfully!";
-    $GLOBALS["flag"]=1;
+$con = connectSQL();
+
+$res = mysqli_query($con, "select pw from usr where name='{$_POST[name]}'");
+if($res == false){
+    mysqli_error($con);
+}
+
+else{
+    $arr = mysqli_fetch_array($res, MYSQL_ASSOC);
+    if($arr==null) {
+        echo "<script> alert('not registered'); parent.location.href='/index.html';</script>";
+        exit();
+    }
+    if($arr[pw]==$_POST[pw]){
+        echo "<script> parent.location.href='/main.html'; </script>";
+
+    }else{
+        echo "<script> alert('wrong password'); parent.location.href='/index.html'</script>";
+        exit();
+    }
 
 }
+
+
+
+
 
 
 ?>

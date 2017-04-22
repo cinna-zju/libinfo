@@ -1,16 +1,7 @@
 <?php
-function output($result)
-{
-    if($result==false) return;
-    while( $row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-        foreach($row as $k=>$value){
-            echo $k.":".$row[$k].", ";
-        }
-        echo "</br>";
-    }
+require 'common.php';
 
-}
-$con = mysqli_connect("127.0.0.1","root","951028","test2") or die ("could not connect to mysql");
+$con = connectSQL();
 
 $word = explode(",", $_POST[word]);
 if($word[1]!=""){
@@ -42,7 +33,8 @@ if($word[1]!=""){
 }
 
 if($r1+$r2==0)
-    echo "NOTHING FOUND";
+    echo "<script>alert('NOTHING FOUND')</script>";
+    
 mysqli_close($con);
 
 ?>

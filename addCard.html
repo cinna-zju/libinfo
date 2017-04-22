@@ -7,14 +7,14 @@
 
 <body>
 
-<form action="addCard.php" method="post">
-卡号: <input type="text" name="cno"><br>
-姓名: <input type="text" name="name"><br>
-学院： <input type="text" name="department"><br>
+    <form action="addCard.php" method="post">
+        <input type="text" name="cno" require="required" placeholder="卡号"><br>
+        <input type="text" name="name" require="required" placeholder="姓名"><br>
+        <input type="text" name="department" require="required" placeholder="学院"><br>
 
-类型：<input type="text" name="type"><br>
-<input type="submit">
-</form>
+        <input type="text" name="type" require="required" placeholder="类型"><br>
+        <input type="submit">
+    </form>
 
 </body>
 </html>

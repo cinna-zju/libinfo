@@ -1,8 +1,9 @@
 <?php
-$con = mysqli_connect("127.0.0.1","root","951028","test2") or die ("could not connect to mysql");
+require 'common.php'
+$con = connectSQL();
 
 if (mysqli_query($con, "delete from card where cno = '{$_POST[cno]}'")){
-    echo "card deleted succeed!";
+    echo "<script>alert('card deleted succeed!')</script>";
 }else {
     echo mysqli_error($con);
 }
