@@ -5,7 +5,7 @@ $con = connectSQL();
 
 $res = mysqli_query($con, "select pw from usr where name='{$_POST[name]}'");
 if($res == false){
-    mysqli_error($con);
+    errInfo($con);
 }
 
 else{
@@ -15,7 +15,7 @@ else{
         exit();
     }
     if($arr[pw]==$_POST[pw]){
-        echo "<script> parent.location.href='/main.html'; </script>";
+        echo "<script> parent.location.href='./html/main.html'; </script>";
 
     }else{
         echo "<script> alert('wrong password'); parent.location.href='/index.html'</script>";
