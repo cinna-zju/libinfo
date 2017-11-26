@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="Login.css"/>
+    <link rel="stylesheet" type="text/css" href="login.css"/>
 </head>
 
 <body>
     <div id="login">
         <h1>Library info Center</h1>
-        <form action="login.php" method="post">
+        <form action="./login.php" method="post">
             <input type="text" required="required" placeholder="User name" name="name"></input>
             <input type="password" required="required" placeholder="Password" name="pw"></input>
             <button class="but" type="submit">Login</button>
         </form>
+    </div>
+    <div id="sign">
+	<form method="get" action="./sign_up.html">
+		<button class="but" type="sumbit">Sign Up</button>
+	</form>
     </div>
 </body>
 

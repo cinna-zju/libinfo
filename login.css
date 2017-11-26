@@ -19,6 +19,15 @@ body{
     width: 310px;
     height: 300px;
 }
+#sign{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    width:310px;
+    height:300px;
+}
+    
 #login h1{
     color: #fff;
 
