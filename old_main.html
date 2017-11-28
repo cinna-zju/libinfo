@@ -1,0 +1,66 @@
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="gh-buttons.css"/>
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+	<link rel="icon" href="gh-icons.png" type="image/png" />
+
+	<script>
+		function click1() {
+			document.getElementById('page').innerHTML = "<iframe frameborder=0 src='http://localhost/html/addCard.html'"+"style='width: 800px;height: 600px;'"+"></iframe>";
+		}
+		function click2() {
+			document.getElementById('page').innerHTML = "<iframe frameborder=0 src='http://localhost/html/delCard.html'"+"style='width: 800px;height: 600px;'"+"></iframe>";
+		}
+		function click3() {
+			document.getElementById('page').innerHTML = "<iframe frameborder=0 src='http://localhost/html/AddBook.html'"+"style='width: 800px;height: 600px;'"+"></iframe>";
+		}
+		function click4() {
+			document.getElementById('page').innerHTML = "<iframe frameborder=0 src='http://localhost/html/borrow.html'"+"style='width: 800px;height: 600px;'"+"></iframe>";
+		}
+		function click5() {
+			document.getElementById('page').innerHTML = "<iframe frameborder=0 src='http://localhost/html/return.html'"+"style='width: 800px;height: 600px;'"+"></iframe>";
+		}
+
+	</script>
+</head>
+
+<body>
+	<div id="content">
+		<div class="line">
+			<div class="button-group">
+				<button id="add" class="button primary"	type='button' onclick="click1()") >Add Card</button>
+				<button id="delete" class="button danger" type='button' onclick="click2()") >Delete Card</button>
+			</div>
+
+			<div class="button-group">
+		    	<button id="addBook" class="button" type='button' onclick="click3()" >Add Book</button>
+			</div>
+			<div class="button-group">
+				<button id="borrow" class="button" type='button' onclick="click4()">Borrow</button>
+				<button id="return" class="button" type='button' onclick="click5()" >Return</button>
+			</div>
+		</div>
+
+		<div class="line">
+			<form id="search" action="../search.php" method="post">
+		   		<span><input type="text" name=word></span>
+		   		<span><button type="submit" class="button icon search">search</span>
+	   		</form>
+	   </div>
+
+		<div class="line">
+		    <form action="../load.php" method="post" enctype="multipart/form-data">
+		        <input type="file"  name="file" id="file" />
+		        <input id="submit" class="button" type="submit" name="submit"/>
+		    </form>
+		</div>
+	</div>
+
+	<div id="page">
+		<iframe id="ifrPage" name="ifrPage" frameborder=0 src="" style='width: 800px;height: 600px;'></iframe>
+	</div>
+
+</body>
+</html>

@@ -73,8 +73,8 @@ function errInfo($con)
         if($no==1146) echo "table is not existed!";
         if($no==1149) echo "Please check the input";
         if($no==1406) echo "input is too long";
-        if($no==1451) echo "the card has borrow record";
-        if($no==1062) echo "the card has already borrowed the book";
+       
+        if($no==1062) echo "user already exists";
         exit();
     }
 

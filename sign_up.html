@@ -1,18 +1,22 @@
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset=utf-8" />
+	    <title>Registration</title>
+	    <link rel="stylesheet" type="text/css" href="login.css"/>
     </head>
 
     <body>
-
-        <form action="./sign_up.php" method="post">
-            <input type="text" name="name" required="required" placeholder="user name"><br>
-            <input type="text" name="pw" placeholder="password"><br>
-            <input type="text" name="rpw" placeholder="repeat passwprd"><br>
+	<div id="login">
+        <h1>sign up</h1>
+        	<form action="./sign_up.php" method="post">
+                <input type="text" name="name" required="required" placeholder="user name"></input>
+            	<input type="password" name="pw" placeholder="password"></input>
+            	<input type="password" name="rpw" placeholder="repeat passwprd"></input>
             
 
-            <input type="submit">
-        </form>
+            	<button class="but" type="submit">submit</button>
+        	</form>
+	</div>
 
     </body>
 </html>

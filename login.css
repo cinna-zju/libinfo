@@ -19,6 +19,16 @@ body{
     width: 310px;
     height: 300px;
 }
+
+#register{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    margin: -150px 0 0 -150px;
+    width: 310px;
+    height: 300px;
+}
+
 #sign{
     position: absolute;
     top: 80%;
